@@ -110,7 +110,7 @@ class Seller
      */
     public $totalStorefrontAsins = null;
 
-    protected $totalStorefrontAsinsCSV = null;
+    public $totalStorefrontAsinsCSV = null;
 
 
     /**
