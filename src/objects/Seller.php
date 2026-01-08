@@ -110,6 +110,8 @@ class Seller
      */
     public $totalStorefrontAsins = null;
 
+    protected $totalStorefrontAsinsCSV = null;
+
 
     /**
      * Statistics about the primary categories of this seller. Based on our often incomplete and outdated product offers data.
