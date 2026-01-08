@@ -111,6 +111,10 @@ class Seller
     public $totalStorefrontAsins = null;
 
     public $totalStorefrontAsinsCSV = null;
+    public $buyBoxNewOwnershipRate = null;
+    public $buyBoxUsedOwnershipRate = null;
+    public $avgBuyBoxCompetitors = null;
+    public $competitors = null;
 
 
     /**
