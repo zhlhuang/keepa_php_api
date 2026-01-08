@@ -38,7 +38,7 @@ All needed requirements (php version/external libraries) you find in can find in
 Composer
 -----
 ```bash
-composer require keepa/php_api:*
+composer require zhlhuang/keepa_php_api:*
 ```
 
 <a name="examples"></a>Quick Example

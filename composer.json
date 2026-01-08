@@ -1,5 +1,5 @@
 {
-  "name": "keepa/php_api",
+  "name": "zhlhuang/keepa_php_api",
   "license": "Apache-2.0",
   "description": "API Framework for Keepa.com",
   "require": {
