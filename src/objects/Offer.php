@@ -107,12 +107,6 @@ class Offer
     public $isShippable = null;
 
     /**
-     * Indicating whether or not the offer is an Add-on item.
-     * @var bool|null
-     */
-    public $isAddonItem = null;
-
-    /**
      * Indicating whether or not the offer is a pre-order.
      * @var bool|null
      */
@@ -125,10 +119,10 @@ class Offer
     public $isWarehouseDeal = null;
 
     /**
-     * Indicating whether or not our system identified that the offering merchant attempts to scam users.
+     * Indicating whether or not the offer ships from China.
      * @var bool|null
      */
-    public $isScam = null;
+    public $shipsFromChina;
 
     /**
      * Indicating whether or not the offer ships from China.

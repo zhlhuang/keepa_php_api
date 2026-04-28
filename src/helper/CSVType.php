@@ -36,10 +36,24 @@ class CSVType
     const REFURBISHED_SHIPPING = 27;
     const RESERVED_1 = 28;
     const RESERVED_2 = 29;
+    /** Price history of the lowest new price on the respective eBay locale, including shipping costs. */
+    const EBAY_NEW_SHIPPING = 28;
+    /** Price history of the lowest used price on the respective eBay locale, including shipping costs. */
+    const EBAY_USED_SHIPPING = 29;
     const TRADE_IN = 30;
     const RENT = 31;
     const BUY_BOX_USED_SHIPPING = 32;
     const PRIME_EXCL = 33;
+
+    /**
+     * New FBA offer count history (includes Amazon offer)
+     */
+    const COUNT_NEW_FBA = 34;
+
+    /**
+     * New FBM offer count history
+     */
+    const COUNT_NEW_FBM = 35;
 
     /**
      * @var $index int

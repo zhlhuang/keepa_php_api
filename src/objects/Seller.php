@@ -58,12 +58,6 @@ class Seller
     public $lastUpdate = null;
 
     /**
-     * Indicating whether or not our system identified that this seller attempts to scam users.
-     * @var bool|null
-     */
-    public $isScammer = null;
-
-    /**
      * Indicating whether or not the offer ships from China.
      * @var bool|null
      */
@@ -109,12 +103,6 @@ class Seller
      * @var int[]|null
      */
     public $totalStorefrontAsins = null;
-
-    public $totalStorefrontAsinsCSV = null;
-    public $buyBoxNewOwnershipRate = null;
-    public $buyBoxUsedOwnershipRate = null;
-    public $avgBuyBoxCompetitors = null;
-    public $competitors = null;
 
 
     /**
@@ -224,7 +212,7 @@ class Seller
      * Example: Unternehmen in Privatbesitz
      * @var string|null
      */
-	public $stringbusinessType;
+	public $businessType;
 
 	/**
      * The share capital. null if not available.
@@ -246,6 +234,35 @@ class Seller
      */
     public $email;
 
+    /**
+     * CSV history of total storefront ASINs. Format: Keepa Time minutes, count, ...
+     * @var int[]|null
+     */
+    public $totalStorefrontAsinsCSV = null;
+
+    /**
+     * Average number of sellers competing for the Buy Box.
+     * @var float|null
+     */
+    public $avgBuyBoxCompetitors = null;
+
+    /**
+     * Average New Buy Box ownership percentage.
+     * @var int|null
+     */
+    public $buyBoxNewOwnershipRate = null;
+
+    /**
+     * Average Used Buy Box ownership percentage.
+     * @var int|null
+     */
+    public $buyBoxUsedOwnershipRate = null;
+
+    /**
+     * The top five sellers most commonly offering the same products.
+     * @var \Keepa\objects\Competitors[]|null
+     */
+    public $competitors = null;
 
     /**
      *

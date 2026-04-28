@@ -50,6 +50,12 @@ class Product
     public $imagesCSV = null;
 
     /**
+     * Provides metadata for images associated with the product.
+     * @var \Keepa\helper\ImageObject[]|null
+     */
+    public $images = null;
+
+    /**
      * Array of category node ids
      * @var int[]|null
      */
@@ -502,6 +508,17 @@ class Product
     public $hasReviews = false;
 
     /**
+     * Contains variation specific review and rating counts histories as well as a last update timestamp.
+     * null if not available.
+     * It is not possible to force an update to the reviews object data.
+     * For non-variation specific ratings and review data access the csv field.
+     * Accessible only if the rating parameter was used in the Product Request.
+     * The ratingCount history has not been updated since April 9th 2025 as that data point was removed by Amazon.
+     * @var \Keepa\helper\ReviewObject|null
+     */
+    public $reviews = null;
+
+    /**
      * Optional field. Only set if the <i>stats</i> parameter was used in the Product Request. Contains statistic values.
      * @var \Keepa\objects\Stats|null
      */
@@ -680,6 +697,13 @@ class Product
     public $coupon = null;
 
     /**
+     * Historical values for the coupon field. Format: [ keepaTime, one-time coupon, subscribe and save coupon, keepaTime, … ].
+     * We started tracking coupon history on June 15th 2024.
+     * @var int[]|null
+     */
+    public $couponHistory = null;
+
+    /**
      * Whether or not the current new price is MAP restricted. Can be used to differentiate out of stock vs. MAP restricted prices (as in both cases the current price is -1).
      * @var bool|null
      */
@@ -835,6 +859,23 @@ class Product
      */
     public $aPlus = null;
 
+    /**
+     * A categorization name of products that behave similarly (e.g. "apparel", "kitchen").
+     * @var string|null
+     */
+    public $websiteDisplayGroupName = null;
+
+    /**
+     * A categorization of products that behave similarly (e.g. "apparel_display_on_website").
+     * @var string|null
+     */
+    public $websiteDisplayGroup = null;
+
+    /**
+     * For books only: An array listing other available formats or bindings of a book, excluding the current format.
+     * @var \Keepa\helper\FormatObject[]|null
+     */
+    public $formats = null;
 
     /**
      * Specific uses for the product, providing detailed applications.
@@ -926,4 +967,10 @@ class Product
      * @var string[]|null
      */
     public $specialFeatures = null;
+
+    /**
+     * Provides metadata for active deals associated with the product’s buy box. undefined if unavailable.
+     * @var \Keepa\helper\DealDetails[]|null
+     */
+    public $deals = null;
 }
