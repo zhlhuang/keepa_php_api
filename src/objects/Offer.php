@@ -124,11 +124,6 @@ class Offer
      */
     public $shipsFromChina;
 
-    /**
-     * Indicating whether or not the offer ships from China.
-     * @var bool|null
-     */
-    public $shipsFromChina;
 
     /**
      * True if the seller is Amazon (e.g. "Amazon.com").
